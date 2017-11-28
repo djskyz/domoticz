@@ -176,7 +176,7 @@ void CTeleinfoSerial::MatchLine()
 	if (label == "ADCO") teleinfo.ADCO = vString;
 	else if (label == "OPTARIF") teleinfo.OPTARIF = vString;
 	else if (label == "ISOUSC") teleinfo.ISOUSC = value;
-	else if (label == "PAPP") teleinfo.PAPP = value;
+	else if (label == "PAPP") { teleinfo.PAPP = value; withPAPP = true; }
 	else if (label == "PTEC")  teleinfo.PTEC = vString;
 	else if (label == "IINST") teleinfo.IINST = value;
 	else if (label == "BASE") teleinfo.BASE = value;
